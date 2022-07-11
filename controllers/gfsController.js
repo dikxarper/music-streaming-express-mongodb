@@ -19,7 +19,7 @@ musicDB.once("open", () => {
 })
 
 const storage = new GridFsStorage({
-  url: "mongodb+srv://dias:dias@diascluster.pduxp.mongodb.net/musicDB?retryWrites=true&w=majority",
+  url: "uri",
   file: (req, file) => {
     return new Promise((resolve, rejects) => {
       crypto.randomBytes(16, (err, buf) => {
