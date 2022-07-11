@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 8000
 
 //connect to mongodb
 const mongoURI =
-  "mongodb+srv://dias:dias@diascluster.pduxp.mongodb.net/?retryWrites=true&w=majority"
+  "your mongouri"
 mongoose
   .connect(mongoURI)
   .then((result) => console.log("MongoDB database connected"))
@@ -42,7 +42,7 @@ musicDB.once("open", () => {
 
 //create storage object
 const storage = new GridFsStorage({
-  url: "mongodb+srv://dias:dias@diascluster.pduxp.mongodb.net/musicDB?retryWrites=true&w=majority",
+  url: "uri",
   file: (req, file) => {
     return new Promise((resolve, rejects) => {
       crypto.randomBytes(16, (err, buf) => {
@@ -120,14 +120,6 @@ app.get("/audio/:filename", (req, res) => {
   })
 })
 
-//Googleauthorization
-
-const { OAuth2Client } = require("google-auth-library")
-const CLIENT_ID =
-  "15007661587-6de9351j41ea21u0eudt0vor4rhm74fc.apps.googleusercontent.com"
-const client = new OAuth2Client(CLIENT_ID)
-
-//Middleware
 app.set("view engine", "/views")
 app.set("view engine", "ejs")
 
