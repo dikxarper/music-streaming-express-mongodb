@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body>
+    <style>
+      .labelInput {
+        margin: 0 15px;
+        display: inline;
+      }
+      .button {
+        padding: 5px 15px;
+      }
+      .button:hover {
+        color: #455a64;
+      }
+    </style>
+    <form action="/updateUser" method="POST">
+      <h3>Editing the user:</h3>
+      <div class="labelInput">
+        <label>Username:</label>
+        <input
+          name="username"
+          type="username"
+          placeholder="Username"
+          id="username"
+          autocomplete="off"
+        />
+      </div>
+      <div class="labelInput">
+        <label>Email</label>
+        <input
+          name="email"
+          type="email"
+          placeholder="Email"
+          id="email"
+          autocomplete="off"
+        />
+      </div>
+      <div class="labelInput">
+        <label>City:</label>
+        <input
+          name="city"
+          type="city"
+          placeholder="City"
+          id="city"
+          autocomplete="off"
+        />
+      </div>
+      <button type="submit" class="button">Update</button>
+    </form>
+  </body>
+</html>

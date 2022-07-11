@@ -1,0 +1,10 @@
+# Ignore Procfile for heroku
+Procfile
+
+# Ignore node_modules
+node_modules
+
+# Ignore .env (Port and mongoURI)
+.env
+
+

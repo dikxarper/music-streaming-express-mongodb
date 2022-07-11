@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #9494a8;
+}
+
+table {
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.header_fixed {
+  max-height: 100vh;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid #dddddd;
+}
+
+.header_fixed thead th {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  color: #e6e7e8;
+  font-size: 15px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #dddddd;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+td img {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  border: 5px solid #e6e7e8;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #edeef1;
+}
+
+tr:hover td {
+  color: #757194;
+  cursor: default;
+  background-color: #ffffff;
+}
+
+td button {
+  border: none;
+  padding: 7px 20px;
+  border-radius: 20px;
+  background-color: black;
+  color: #e6e7e8;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  font-family: sans-serif;
+  text-align: center;
+}
+.tabContainer {
+  margin-top: 50px;
+  width: 100%;
+}
+.tabContainer .buttonContainer {
+  height: 15%;
+}
+.tabContainer .buttonContainer button {
+  width: 25%;
+  height: 100%;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 18px;
+  background-color: #eee;
+}
+.tabContainer .buttonContainer button:hover {
+  background-color: #d7d4d4;
+}
+.tabContainer .tabPanel {
+  background-color: white;
+  color: black;
+  display: none;
+}
+
+.form_title {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.center {
+  position: relative;
+  margin-left: 560px;
+  width: 400px;
+
+  background: white;
+  border-radius: 10px;
+}
+
+.center h1 {
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.center form {
+  position: relative;
+  box-sizing: border-box;
+}
+
+form .text__field {
+  position: relative;
+  border-bottom: 2px solid #000000;
+  margin: 30px 0;
+}
+
+.text__field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.text__field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #000000;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.text__field span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #757194;
+  transition: 0.5s;
+}
+
+.pass {
+  margin: -5px 0 20px 5px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.pass:hover {
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  width: 60%;
+  height: 50px;
+  border: 1px solid;
+  background: #757194;
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  border-color: #757194;
+  transition: 0.5s;
+}
+
+.signup__link {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+
+.signup__link a {
+  color: #757194;
+  color: #bbb9c4;
+  text-decoration: none;
+}
+
+.signup__link a:hover {
+  text-decoration: underline;
+}
+
+.g-signin2 {
+  width: 100%;
+  border: 1px solid;
+}
+
+.g-signin2 > div {
+  margin: 0 auto;
+}
+
+.back__btn img {
+  width: 40px;
+  height: 40px;
+
+  margin-left: 9%;
+  margin-top: 6%;
+  filter: invert(24%) sepia(16%) saturate(523%) hue-rotate(208deg)
+    brightness(95%) contrast(88%);
+}
+
+.back__btn img {
+  width: 40px;
+  height: 40px;
+
+  margin-left: 9%;
+  margin-top: 6%;
+  filter: invert(24%) sepia(16%) saturate(523%) hue-rotate(208deg)
+    brightness(95%) contrast(88%);
+}
+
+i {
+  position: absolute;
+}
+
+.button1 {
+  margin-left: 650px;
+  margin-top: 30px;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+
+  text-align: center;
+}
+.button2 {
+  padding: 10px 30px;
+  margin-left: 655px;
+
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.tabPanel4 {
+  height: 100px;
+}
+
+.uploadMusicContainer {
+  margin: 100px;
+  background: white;
+
+  text-align: center;
+}
+
+.musicUpload {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.musicForm_submit {
+  margin-right: 60px;
+}

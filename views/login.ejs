@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-signin-client_id"
+      content="15007661587-6de9351j41ea21u0eudt0vor4rhm74fc.apps.googleusercontent.com"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" src="js/google_auth.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+    <title>Login</title>
+  </head>
+
+  <body onload="document.FormName.reset();">
+    <div class="back__btn">
+      <a href="/"><img src="img/back.png" alt="back__btn" /></a>
+    </div>
+    <div class="center">
+      <h1>Login</h1>
+      <form method="POST" action="/login">
+        <div class="text__field">
+          <input
+            type="text"
+            autocomplete="off"
+            id="username"
+            name="username"
+            required
+          />
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="text__field">
+          <i class="fas fa-lock" onclick="show()"></i>
+          <input
+            name="password"
+            type="password"
+            id="myInput"
+            onclick="togglePassword()"
+            id="password"
+            required
+          />
+          <span class="span"> </span>
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login" />
+        <div class="signup__link">
+          Not a member? <a href="/registration">Sign Up </a>
+        </div>
+        <!--<div id="googleId" class="g-signin2" data-onsuccess="onSignIn"></div>
+        -->
+      </form>
+    </div>
+  </body>
+</html>

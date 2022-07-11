@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/collection.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <title>Profile</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="logo">
+              <% if (login == "islog") { %>
+              <a href="/" class="logo_icon"
+                ><img src="img/New Project.png" class="logo_icon"
+              /></a>
+            </div>
+            <nav class="nav">
+              <a href="/" class="nav__link">Main</a>
+              <a href="collection" class="nav__link">Collection</a>
+              <a href="profile_edit" class="nav__link">Profile Edit</a>
+              <a href="profile" class="nav__link">Profile</a>
+              <a href="/logout" class="nav__link">Logout</a>
+              <% } else { %>
+              <a href="login" class="nav__link">Login</a>
+              <% } %>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main_container">
+      <div class="container_title">Music</div>
+      <div class="container_subtitle">Tracks that are popular in Folkaz</div>
+      <% musicInfo.forEach(function(music) { %>
+      <div class="music_block">
+        <img class="music_img" src="/image/<%=music.pictFile %> " />
+        <div class="music_inf">
+          <div class="music_title"><%=music.musicName %></div>
+          <div class="music_author"><%=music.musicAuthor %></div>
+        </div>
+        <audio controls class="audio" width="100">
+          <source src="/audio/<%=music.musicFile %> " />
+        </audio>
+      </div>
+
+      <% }) %>
+    </div>
+  </body>
+</html>

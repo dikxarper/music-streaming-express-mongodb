@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-signin-client_id"
+      content="15007661587-6de9351j41ea21u0eudt0vor4rhm74fc.apps.googleusercontent.com"
+    />
+    <link rel="stylesheet" href="css/registration.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <title>Registration</title>
+  </head>
+
+  <body>
+    <div class="error_block">
+      <% if (typeof alert != 'undefined') { %> 
+      <% alert.forEach(function(error){%>
+      <div class="error_message"><%=error.msg %></div>
+      <% }); %> <% } %>
+    </div>
+
+    <div class="back__btn">
+      <a href="/"><img src="img/back.png" alt="back__btn" /></a>
+    </div>
+    <div class="center">
+      <h1>Registration</h1>
+      <form action="/registration" method="POST" id="reg-form">
+        <div class="text__field">
+          <input type=" text" id="username" name="username" required />
+          <span></span>
+          <label>Login</label>
+        </div>
+        <div class="text__field">
+          <input
+            type="text"
+            id="email"
+            name="email"
+            required
+            autocomplete="off"
+          />
+          <span></span>
+          <label>E-mail</label>
+        </div>
+        <div class="text__field">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            autocomplete="off"
+          />
+          <label>Password</label>
+        </div>
+        <div class="text__field">
+          <input
+            type="city"
+            id="city"
+            name="city"
+            required
+            autocomplete="off"
+          />
+          <label>City</label>
+        </div>
+        <input
+          type="submit"
+          value="Register"
+          id="signup__btn"
+          autocomplete="off"
+        />
+        <div class="signup__link">
+          Already have an account? <a href="/login"> Login</a>
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript" src="js/google_auth.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </body>
+</html>
